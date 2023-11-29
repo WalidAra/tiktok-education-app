@@ -1,0 +1,57 @@
+CREATE TABLE category (
+    id SERIAL PRIMARY KEY,
+    topic VARCHAR(50)
+);
+
+INSERT INTO category (topic) VALUES
+    ('History'),
+    ('Language'),
+    ('Math'),
+    ('Science'),
+    ('Programming'),
+    ('Art'),
+    ('Gaming'),
+    ('Health'),
+    ('Geography'),
+    ('Psychology'),
+    ('Business');
+
+CREATE TABLE videos (
+    video_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    title VARCHAR(100),
+    url VARCHAR(200),
+    category_id INT REFERENCES category(id),
+    description VARCHAR(1000),
+    poster_id VARCHAR(200),
+    likes_count INTEGER DEFAULT 0
+);
+
+CREATE TABLE likes (
+    like_id SERIAL PRIMARY KEY,
+    likedBy VARCHAR(200),
+    video_id UUID REFERENCES videos(video_id),
+    CONSTRAINT fk_likes_video_id FOREIGN KEY (video_id) REFERENCES videos(video_id)
+);
+
+CREATE TABLE comments (
+    comment_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    userComment VARCHAR(1000),
+    commenter_id VARCHAR(200),
+    video_id UUID REFERENCES videos(video_id)
+);
+
+-- Create indexes separately in PostgreSQL
+CREATE INDEX idx_likes_on_video_id ON likes (video_id);
+CREATE INDEX idx_video_id ON videos (video_id);
+CREATE INDEX idx_title_video ON videos (title);
+
+
+db.users.insertOne({fullName: "Walid Ara",userName: "ExoticAra__",email: "arawalid90@gmail.com",password: "123456",pfpurl: "https://i.pinimg.com/736x/72/47/8f/72478ffec8e4a9d4f37b67f2bcc9e5a7.jpg",followers: [],following: [],joined: new Date(),favCategories: [] })
+{fullName: "Walid Ara",userName: "ExoticAra__",email: "arawalid90@gmail.com",password: "123456",pfpurl: "https://i.pinimg.com/736x/72/47/8f/72478ffec8e4a9d4f37b67f2bcc9e5a7.jpg",followers: [],following: [],joined: new Date(),favCategories: [] }
+
+db.users.createIndex({ "_id": 1 }) 
+db.users.createIndex({ "fullName": 1 })
+db.users.createIndex({ "userName": 1 }) 
+db.users.createIndex({ "email": 1 }) 
+db.users.createIndex({ "password": 1 }) 
+
