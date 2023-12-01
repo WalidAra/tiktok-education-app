@@ -63,7 +63,7 @@ function EditVidPopUp({ isOpen, onClose, onOpen, vid }: Props) {
                   onChange={(e) => setTitle(e.target.value)}
                   type="text"
                   placeholder={`${vid?.title}`}
-                  className="rounded py-2.5 px-4 bg-bgTwoDark w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
+                  className="rounded py-2.5 px-4 bg-primaryDark w-full focus:border-main duration-150 border border-solid border-transparent"
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -72,7 +72,7 @@ function EditVidPopUp({ isOpen, onClose, onOpen, vid }: Props) {
                   onChange={(e) => setDescription(e.target.value)}
                   rows={4}
                   placeholder={`${vid?.description}`}
-                  className="rounded py-2.5 px-4 bg-bgTwoDark w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
+                  className="rounded py-2.5 px-4 bg-primaryDark w-full focus:border-main duration-150 border border-solid border-transparent"
                 ></textarea>
               </div>
             </div>

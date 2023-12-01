@@ -10,7 +10,7 @@ const AsideLi = ({ children, icon, text }: Props) => {
   return (
     <ColorSync
       key=""
-      onDark="hover:bg-bgThreeDark"
+      onDark="hover:bg-secondaryDark"
       onWhite=""
       style="flex items-center justify-between py-2 rounded-lg duration-150 cursor-pointer px-2"
     >

@@ -13,7 +13,7 @@ const DeleteAccountContainer = () => {
         <div className="flex flex-col gap-5">
           <h1 className="capitalize text-xl font-medium">profile details</h1>
 
-          <div className="bg-[#225033] text-bgSixDark p-3 text-lg rounded">
+          <div className="bg-[#225033] text-green-500 p-3 text-lg rounded">
             <h1 className="font-semibold">
               Are you sure you want to delete your account?
             </h1>

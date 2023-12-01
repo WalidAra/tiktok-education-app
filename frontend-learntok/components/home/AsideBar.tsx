@@ -27,13 +27,13 @@ const AsideBar = ({
   return (
     <ColorSync
       key={undefined}
-      onDark="bg-bgTwoDark"
+      onDark="bg-almostBlack"
       onWhite="bg-bgWhiteTwo"
       style={` ${
         active ? "" : "translate-x-full"
       }  duration-300 translate-x-0 w-[290px] h-screen absolute top-0 right-0 z-50 px-2 py-3`}
     >
-      <div className="w-full justify-between flex items-center py-4 px-3">
+      <div className="w-full  justify-between flex items-center py-4 px-3">
         <UserShortCutDef />
 
         <IconButton
@@ -74,7 +74,9 @@ const AsideBar = ({
         <AsideLi icon={<BiSupport />} text="LearnTok support" children />
       </AsideList>
 
-      <SignOutOption />
+      <div className="w-full">
+        <SignOutOption />
+      </div>
     </ColorSync>
   );
 };

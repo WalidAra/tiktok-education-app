@@ -150,10 +150,10 @@ const UploadPage = () => {
                 key={undefined}
                 onDark=""
                 onWhite=""
-                style="flex flex-col gap-2"
+                style="flex flex-col gap-2 "
               >
                 <label
-                  className="capitalize font-medium text-base  text-white"
+                  className="capitalize  font-medium text-base  text-white"
                   htmlFor=""
                 >
                   Title
@@ -166,8 +166,8 @@ const UploadPage = () => {
                       title: e.target.value,
                     }))
                   }
-                  className={`py-3 px-5 border border-solid rounded w-full   ${
-                    _theme?.value ? "border-bgFiveDark bg-bgTwoDark" : ""
+                  className={`py-3 px-5 rounded-lg w-full   ${
+                    _theme?.value ? " bg-primaryDark" : ""
                   }`}
                   placeholder="Enter the title"
                   type="text"
@@ -196,8 +196,8 @@ const UploadPage = () => {
                       description: e.target.value,
                     }))
                   }
-                  className={`py-3 px-5 border border-solid rounded w-full   ${
-                    _theme?.value ? "border-bgFiveDark bg-bgTwoDark" : ""
+                  className={`py-3 px-5 rounded-lg w-full   ${
+                    _theme?.value ? "bg-primaryDark" : ""
                   }`}
                   placeholder="Enter the description"
                   type="text"
@@ -213,7 +213,7 @@ const UploadPage = () => {
                 style="flex flex-col gap-2"
               >
                 <label
-                  className="capitalize font-medium text-base  text-white"
+                  className="capitalize font-medium text-base text-white"
                   htmlFor=""
                 >
                   category
@@ -225,15 +225,15 @@ const UploadPage = () => {
                       category_id: Number(e.target.value),
                     }));
                   }}
-                  className={`${
-                    _theme?.value ? " bg-bgTwoDark" : ""
+                  className={`p-2 rounded-md${
+                    _theme?.value ? " bg-primaryDark" : ""
                   } outline-none text-md w-60`}
                 >
                   {educationTopics.map((topic) => (
                     <option
                       value={topic.id}
                       className={`outline-none capitalize text-md p-2 ${
-                        _theme?.value ? "bg-bgTwoDark" : ""
+                        _theme?.value ? "bg-almostBlack" : ""
                       }`}
                       key={topic.id}
                     >
@@ -259,7 +259,7 @@ const UploadPage = () => {
                 method={() => {
                   UploadToServer();
                 }}
-                style={`bg-bgSixDark text-black font-medium  ${
+                style={`bg-main text-white text-black font-medium  ${
                   _theme?.value ? "" : ""
                 }`}
                 text="Post"

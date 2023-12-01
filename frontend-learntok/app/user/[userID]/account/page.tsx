@@ -85,7 +85,7 @@ const YourAccount = () => {
               onChange={(e) => setUserName(e.target.value)}
               type="text"
               placeholder="Enter your new username"
-              className="rounded py-2.5 px-4 bg-bgFourDark w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
+              className="rounded py-2.5 px-4 bg-almostBlack w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -96,7 +96,7 @@ const YourAccount = () => {
               onChange={(e) => setFullName(e.target.value)}
               type="text"
               placeholder="Enter your new full name"
-              className="rounded py-2.5 px-4 bg-bgFourDark w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
+              className="rounded py-2.5 px-4 bg-almostBlack w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -107,7 +107,7 @@ const YourAccount = () => {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="example@gmail.com"
-              className="rounded py-2.5 px-4 bg-bgFourDark w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
+              className="rounded py-2.5 px-4 bg-almostBlack w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -118,7 +118,7 @@ const YourAccount = () => {
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               placeholder="Enter your password"
-              className="rounded py-2.5 px-4 bg-bgFourDark   w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
+              className="rounded py-2.5 px-4 bg-almostBlack   w-full focus:border-bgSixDark duration-150 border border-solid border-transparent"
             />
           </div>
         </div>

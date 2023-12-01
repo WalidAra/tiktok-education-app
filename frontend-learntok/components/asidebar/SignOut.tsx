@@ -33,8 +33,8 @@ const SignOutOption = () => {
   return (
     <>
       <AsideList>
-        <Link href="/">
-          <button onClick={SignOut}>
+        <Link className="w-full" href="/">
+          <button className="w-full" onClick={SignOut}>
             <AsideLi icon={<PiSignOutBold />} text="sign out" children />
           </button>
         </Link>
