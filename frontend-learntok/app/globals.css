@@ -311,11 +311,11 @@
 }
 
 .check:hover svg {
-  stroke: var(--accent-color, #1db954);
+  stroke: var(--accent-color, #2761f5);
 }
 
 #cr1:checked + .check svg {
-  stroke: var(--accent-color, #1db954);
+  stroke: var(--accent-color, #2761f5);
 }
 
 #cr1:checked + .check svg path {
@@ -330,7 +330,7 @@
 }
 
 #cr2:checked + .check svg {
-  stroke: var(--accent-color, #1db954);
+  stroke: var(--accent-color, #2761f5);
 }
 
 #cr2:checked + .check svg path {
@@ -388,11 +388,11 @@
 }
 
 .switch input:checked + .slider {
-  background: #1db954;
+  background: #2761f5;
 }
 
 .switch input:focus + .slider {
-  box-shadow: 0 0 1px #1db954;
+  box-shadow: 0 0 1px #2761f5;
 }
 
 .switch input:checked + .slider:before {

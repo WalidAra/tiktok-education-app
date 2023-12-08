@@ -39,7 +39,6 @@ const SignUp = () => {
       if (check) {
         localStorage.setItem("userID", result.user.user._id);
       }
-    
     }
   };
 
@@ -47,12 +46,14 @@ const SignUp = () => {
     <div key={"signUp"} className={`w-full center_all flex-shrink-0`}>
       <form className="flex w-full p-5 flex-col gap-2" action="">
         <RegInput
+          style=""
           label={"User Name"}
           placeholder={"Enter your username"}
           value={userName}
           setValue={setUserName}
         />
         <RegInput
+          style=""
           label={"Full Name"}
           placeholder={"Enter your full name"}
           value={fullName}
@@ -60,12 +61,14 @@ const SignUp = () => {
         />
 
         <RegInput
+          style=""
           label={"Email"}
           placeholder={"example@gmail.com"}
           value={email}
           setValue={setEmail}
         />
         <RegInput
+          style=""
           label={"Password"}
           placeholder={"password"}
           value={password}
@@ -76,19 +79,18 @@ const SignUp = () => {
           <CheckBox id="cr2" isChecked={check} setIsChecked={setChecked} />
 
           <Link href={"/forget password"}>
-            <Button colorScheme="green" variant="link">
-              <span className="text-sm font-normal">Forget password?</span>
+            <Button variant="link">
+              <span className="text-sm font-normal text-main">Forget password?</span>
             </Button>
           </Link>
         </div>
 
-        <Button
+        <button
           onClick={() => SignUpFunc()}
-          color={"black"}
-          backgroundColor={"green.500"}
+          className="w-full rounded-md py-2 px-4 bg-main text-white font-medium duration-200 hover:bg-[#2249aa] cursor-pointer"
         >
-          Login
-        </Button>
+          Sign up
+        </button>
       </form>
     </div>
   );

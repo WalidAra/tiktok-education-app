@@ -12,6 +12,7 @@ import {
 import { useDispatch } from "react-redux";
 import CheckBox from "./main/CheckBox";
 import RegInput from "./main/RegInput";
+import { useTheme } from "@/context/Theme";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Login = () => {
   const [password, setPassword] = useState<string>("");
   const [wrong, setWrong] = useState<boolean>(false);
   const [isChecked, setIsChecked] = useState(false);
+  const _theme = useTheme();
 
   const getLoginData = async () => {
     const info = { email, password };
@@ -70,21 +72,20 @@ const Login = () => {
           />
 
           <Link href={"/forget password"}>
-            <Button colorScheme="green" variant="link">
-              <span className="text-sm font-normal">Forget password?</span>
+            <Button  variant="link">
+              <span className="text-sm font-normal text-main">Forget password?</span>
             </Button>
           </Link>
         </div>
 
-        <Button
+        <button
           onClick={() => {
             getLoginData();
           }}
-          color={"black"}
-          backgroundColor={"green.500"}
+          className="w-full rounded-md py-2 px-4 bg-main text-white font-medium duration-200 hover:bg-[#2249aa] cursor-pointer"
         >
           Login
-        </Button>
+        </button>
       </form>
     </div>
   );

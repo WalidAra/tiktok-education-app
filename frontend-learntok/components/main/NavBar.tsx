@@ -14,7 +14,7 @@ const NavBar = () => {
         "w-full py-2 px-4 rounded hidden sm:flex items-center justify-between"
       }
       onDark={"bg-tertiaryDark"}
-      onWhite={""}
+      onWhite={"bg-secondaryWhite"}
     >
       <LogoNav />
       <InputSearch />

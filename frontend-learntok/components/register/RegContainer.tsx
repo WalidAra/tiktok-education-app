@@ -69,7 +69,7 @@ const RegContainer = ({ isShow, setIsShow }: Props) => {
             <Login />
           </div>
 
-          <ColorSync key={undefined} onDark="bg-bgTwoDark" onWhite="" style="">
+          <ColorSync key={undefined} onDark="bg-black" onWhite="" style="">
             <div className={`px-4 py-3 text-xs text-center `}>
               <p>
                 By continuing, you agree to LearnTok
@@ -81,7 +81,7 @@ const RegContainer = ({ isShow, setIsShow }: Props) => {
                 >
                   <span>&nbsp; Terms of Service</span>
                 </ColorSync>
-                and confirm that you have read LearnTok
+                &nbsp; and confirm that you have read LearnTok
                 <ColorSync
                   key={undefined}
                   onDark="text-white"

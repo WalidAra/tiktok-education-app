@@ -10,7 +10,10 @@ const Discover = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const _theme = useTheme();
   const topicStyle =
-    "xl:border-2 xl:border-gray-300 px-3 py-1 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer ";
+    "border border-solid border-transparent bg-backgroundDark duration-150 hover:opacity-50 px-3 py-1 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer ";
+  
+    const lightStyle =
+      "border border-solid border-ccc duration-150 hover:opacity-50 px-3 py-1 rounded xl:rounded-full flex items-center gap-2 justify-center cursor-pointer ";
 
   return (
     <div
@@ -23,7 +26,10 @@ const Discover = () => {
           _theme?.value ? "from-secondaryDark" : "from-secondaryWhite"
         }`}
       >
-        <div className="absolute bottom-2" onClick={() => setIsOpen((prev) => !prev)}>
+        <div
+          className="absolute bottom-2"
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
           <MyIconButton style="text-xl">
             {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </MyIconButton>
@@ -36,7 +42,10 @@ const Discover = () => {
 
       <div className="w-full flex xl:flex-wrap gap-1.5 sm:flex-col xl:flex-row">
         {educationTopics.map((topic) => (
-          <div key={`${topic.id}-${topic.topic}`} className={`${topicStyle}`}>
+          <div
+            key={`${topic.id}-${topic.topic}`}
+            className={`${_theme?.value ? topicStyle : lightStyle}`}
+          >
             <span className="font-bold  ">{topic.icon}</span>
             <span className={`font-medium text-md hidden xl:block capitalize`}>
               {topic.topic}
@@ -44,9 +53,7 @@ const Discover = () => {
           </div>
         ))}
 
-        <div className="w-full h-10" >
-
-        </div>
+        <div className="w-full h-10"></div>
       </div>
     </div>
   );

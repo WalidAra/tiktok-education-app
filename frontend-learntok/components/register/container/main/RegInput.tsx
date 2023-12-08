@@ -17,7 +17,7 @@ const RegInput = ({ label, placeholder, setValue, value ,style }: Props) => {
         onChange={(e) => setValue(e.target.value)}
         type="email"
         placeholder={placeholder}
-        className="rounded py-2 px-4 bg-primaryDark w-full focus:border-main duration-150 border border-solid "
+        className="rounded py-2 px-4 bg-primaryDark w-full focus:border-main duration-150 border border-solid border-transparent"
       />
     </div>
   );

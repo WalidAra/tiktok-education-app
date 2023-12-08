@@ -28,7 +28,7 @@ const AsideBar = ({
     <ColorSync
       key={undefined}
       onDark="bg-almostBlack"
-      onWhite="bg-bgWhiteTwo"
+      onWhite="bg-primaryWhite"
       style={` ${
         active ? "" : "translate-x-full"
       }  duration-300 translate-x-0 w-[290px] h-screen absolute top-0 right-0 z-50 px-2 py-3`}

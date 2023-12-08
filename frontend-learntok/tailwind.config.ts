@@ -1,5 +1,5 @@
 import { withUt } from "uploadthing/tw";
- 
+
 export default withUt({
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -32,6 +32,7 @@ export default withUt({
       },
 
       colors: {
+        ccc: "#ccc",
         blackLayer: "rgba(0,0,0,0.5)",
         main: "#2761f5",
         // Dark theme colors
@@ -53,4 +54,3 @@ export default withUt({
   },
   plugins: [],
 });
-
