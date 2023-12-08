@@ -13,9 +13,7 @@ const Video = {
 
   getVideoByID: async (id) => {
     try {
-      const result = await pgClient.query(query.queryFindVideoByID(id), [
-        id,
-      ]);
+      const result = await pgClient.query(query.queryFindVideoByID(id), [id]);
       return result.rows;
     } catch (error) {
       console.error(error);
@@ -31,12 +29,18 @@ const Video = {
     }
   },
 
-  updateVideoLike: async (id, updated) => {
+  updateVideoLike: async (video_id, updated, user_id) => {
+
     try {
-      const result = await pgClient.query(
-        query.queryUpdateVideoLike(id, updated)
-      );
-      return result.rows;
+      const result = await pgClient.query(query.queryUpdateVideoLike(video_id, updated), [
+        updated,
+        video_id,
+      ]);
+
+      // await pgClient.query(
+      //   query.AddNewLike((user_id, video_id), [user_id, video_id])
+      // );
+      return result;
     } catch (error) {
       console.error(error);
     }

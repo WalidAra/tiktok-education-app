@@ -4,13 +4,12 @@ import Video from "./card/Video";
 
 type Props = {
   card: VideoProp;
-  key: string;
+
 };
 
-const Card = ({ card, key }: Props) => {
+const Card = ({ card }: Props) => {
   return (
     <div
-      key={key}
       className=" scroll-snap-align w-full h-screen xl:w-[500px] sm:w-96 sm:h-full m-auto relative"
     >
       <Poster description={card.description} poster={card.poster} />

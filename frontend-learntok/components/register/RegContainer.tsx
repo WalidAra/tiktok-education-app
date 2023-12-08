@@ -18,7 +18,7 @@ type Props = {
 const RegContainer = ({ isShow, setIsShow }: Props) => {
   const [currentIndex, setCurrentIndex] = useState<number>(1);
   const [prevIndex, setPrevIndex] = useState<number>(1);
-  const [Height, setHeight] = useState<string>("h-[220px]");
+  const [Height, setHeight] = useState<string>("h-[230px]");
 
   useEffect(() => {
     AOS.init();
@@ -45,7 +45,7 @@ const RegContainer = ({ isShow, setIsShow }: Props) => {
                   method={() => {
                     setCurrentIndex(prevIndex);
                     if (prevIndex === 1) {
-                      setHeight("h-[220px]");
+                      setHeight("h-[230px]");
                     }
                   }}
                 >

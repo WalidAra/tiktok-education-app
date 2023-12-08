@@ -11,10 +11,8 @@ type Props = {
 
 const Setter = ({ children }: Props) => {
   const dispatch = useDispatch();
-  const [data, setData] = useState<UserProp | undefined>(undefined);
-  const id: string | null = clientLocalStorage.getItem("userID");
-
-  const getUserData = async () => {
+  
+  const getUserData = async (id: string | null) => {
     try {
       if (id) {
         const response = await fetch("http://localhost:4040/api/userById", {
@@ -26,10 +24,8 @@ const Setter = ({ children }: Props) => {
         });
 
         const userData = await response.json();
-        setData(userData);
         dispatch(updateUserInfo(userData));
         dispatch(updateGuestInfo({ isUser: true }));
-        
       }
     } catch (error) {
       console.error(error);
@@ -37,9 +33,10 @@ const Setter = ({ children }: Props) => {
   };
 
   useEffect(() => {
-    getUserData();
+    const id: string | null = clientLocalStorage.getItem("userID");
+    getUserData(id);
     
-  }, [id]);
+  }, []);
 
   return <>{children}</>;
 };

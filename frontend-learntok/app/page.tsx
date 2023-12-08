@@ -11,7 +11,9 @@ export default async function Home() {
       {learnTokVids.length > 0 ? (
         <Suspense fallback={<Loading />}>
           {learnTokVids.map((v) => (
-            <Card card={v} key={v.video_id} />
+            <div key={v.video_id + "video"}>
+              <Card card={v} />
+            </div>
           ))}
         </Suspense>
       ) : (

@@ -18,7 +18,7 @@ const ToggleSWitcher = () => {
   return (
     <div>
       <label className="switch scale-75">
-        <input onClick={toggleCheckbox} type="checkbox" checked={isActive} />
+        <input onChange={()=> {}} onClick={toggleCheckbox} type="checkbox" checked={isActive} />
         <span className="slider"></span>
       </label>
     </div>

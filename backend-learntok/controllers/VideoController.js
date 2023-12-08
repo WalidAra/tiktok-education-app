@@ -77,19 +77,27 @@ const videoController = {
     try {
       const vids = await Video.getVideoByID(videoID);
       const user = await User.getUserByID(userID);
-      let num = vids[0].likes;
+      let num = vids[0].likes_count;
+
+      
 
       if (op) {
         num++;
         user.favCategories.push(vids[0].category_id);
       } else {
         num--;
-        user.favCategories.splice(vids[0].category_id, 1);
+        if (num <= 0) num = 0;
+
+        const categoryIndex = user.favCategories.indexOf(vids[0].category_id);
+        if (categoryIndex !== -1) {
+          user.favCategories.splice(categoryIndex, 1);
+        }
       }
 
-      await Video.updateVideoLike(videoID, num);
+
+      const first = await Video.updateVideoLike(videoID, num , userID );
       const result = await User.updateUserState(userID, user);
-      res.status(200).json(result);
+      res.status(200).json(first);
     } catch (error) {
       console.error(error);
     }

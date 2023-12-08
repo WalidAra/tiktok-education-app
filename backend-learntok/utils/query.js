@@ -5,7 +5,7 @@ const queries = {
   queryGetUserVideos: (id_user) =>
     `SELECT * FROM videos WHERE poster_id = '${id_user}'`,
   queryUpdateVideoLike: (id, updated) =>
-    `UPDATE videos SET likes = ${updated} WHERE video_id = ${id}`,
+    `UPDATE videos SET likes_count = $1 WHERE video_id = $2`,
 
   queryGetComments: (id) => "SELECT * FROM comments WHERE video_id = $1",
   queryFindCommentByID: (id) =>
@@ -21,7 +21,7 @@ WHERE video_id = ${id}`,
     `UPDATE videos SET title = '${title}', description = '${description}' WHERE video_id = ${videoID}`,
   DeleteCommentsOfUser: (userID) =>
     `DELETE FROM comments WHERE commenter_id = ${userID} `,
-
+  AddNewLike: (user_id, video_id) => `INSERT INTO likes (likedBy , video_id) VALUES($1, $2)`,
   uploadNewVideo: (
     title,
     description,

@@ -28,7 +28,9 @@ const FollowingVidsPage = async () => {
     <div>
       <Suspense fallback={<Loading />}>
         {learnTokVideos.map((video) => (
-          <Card card={video} key={video.video_id} />
+          <div key={video.video_id + "followingVideo"}>
+            <Card card={video} />
+          </div>
         ))}
       </Suspense>
     </div>

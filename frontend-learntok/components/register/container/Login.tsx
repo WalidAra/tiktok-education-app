@@ -25,16 +25,15 @@ const Login = () => {
     const result: { status: boolean; user: UserProp } = await fcApi.fetchLogin({
       info,
     });
-    console.log("here : ",result, typeof result);
-    
+    console.log("here : ", result, typeof result);
+
     if (!result.status) {
       setWrong(true);
-      throw new Error("LoginError nigga");
     } else {
       dispatch(updateUserInfo(result.user));
       dispatch(updateGuestInfo({ isUser: true }));
       console.log(result.user);
-      
+
       if (isChecked) {
         localStorage.setItem("userID", result.user._id);
       }
@@ -45,17 +44,23 @@ const Login = () => {
     <div key={"login"} className={`w-full center_all flex-shrink-0`}>
       <form className="flex w-full p-5 flex-col gap-5" action="">
         <RegInput
+          style=""
           label={"Email"}
           placeholder={"example@gmail.com"}
           value={email}
           setValue={setEmail}
         />
         <RegInput
+          style={`${wrong ? "border-red-500" : "border-transparent"}`}
           label={"Password"}
           placeholder={"password"}
           value={password}
           setValue={setPassword}
-        />   
+        />
+
+        {wrong && (
+          <p className="text-sm text-red-600">Incorrect password or email</p>
+        )}
 
         <div className="flex items-center justify-between">
           <CheckBox
