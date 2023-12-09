@@ -15,13 +15,16 @@ const Setter = ({ children }: Props) => {
   const getUserData = async (id: string | null) => {
     try {
       if (id) {
-        const response = await fetch("http://localhost:4040/api/userById", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ id }),
-        });
+        const response = await fetch(
+          "https://backend-learntok-app.onrender.com/api/userById",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id }),
+          }
+        );
 
         const userData = await response.json();
         dispatch(updateUserInfo(userData));

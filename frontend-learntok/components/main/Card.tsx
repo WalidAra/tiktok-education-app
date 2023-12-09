@@ -12,11 +12,14 @@ const Card = ({ card }: Props) => {
     <ColorSync
       key={undefined}
       style={
-        "scroll-snap-align w-full h-screen xl:w-[500px] sm:w-96 sm:h-full m-auto relative "
+        "scroll-snap-align w-full z-0 h-screen xl:w-[500px] sm:w-96 sm:h-full m-auto relative "
       }
       onDark={""}
       onWhite={""}
     >
+
+
+
       <Poster description={card.description} poster={card.poster} />
       <Reactors videoID={card.video_id.toString()} />
       <Video

@@ -14,7 +14,7 @@ const UserCard = ({ user }: Props) => {
       onDark={"hover:bg-almostBlack "}
       onWhite={""}
     >
-      <Link className="flex items-center gap-3" href={`/user`}>
+      <Link className="flex items-center gap-3" href={`/user/${user._id}`}>
         <img
           src={user.pfpUrl}
           className="w-10 h-10 rounded-full"

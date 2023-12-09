@@ -1,35 +1,25 @@
 "use client";
 
-import { useTheme } from "@/context/Theme";
 import { useSearch } from "@/context/WhichSearch";
+import { Tab, TabIndicator, TabList, Tabs } from "@chakra-ui/react";
 
 const NavSearch = () => {
   const search = useSearch();
-  const _theme = useTheme();
 
   return (
-    <div className=" p-1.5  ">
-      <div
-        className={`inline-flex relative items-center gap-3 overflow-hidden rounded-3xl  ${_theme?.value ? "bg-black":""}`}
-      >
-        <div
-          className={`absolute h-full left-0 top-0 w-24 duration-150 rounded-3xl ${
-            _theme?.value ? "bg-almostBlack" : ""
-          } ${search?.value ? "translate-x-[113%]" : ""}`}
-        ></div>
-        <button
-          onClick={() => search?.setValue(false)}
-          className="py-2 w-24 rounded duration-150 hover:opacity-50 z-10 "
-        >
-          Videos
-        </button>
-        <button
-          onClick={() => search?.setValue(true)}
-          className="py-2 w-24 rounded duration-150 hover:opacity-50 z-10 "
-        >
-          Accounts
-        </button>
-      </div>
+    <div className="block sm:p-2 sm:mt-0 mt-[68px]" >
+      <Tabs position="relative" variant="unstyled">
+        <TabList>
+          <Tab onClick={() => search?.setValue(false)}>Videos</Tab>
+          <Tab onClick={() => search?.setValue(true)}>Accounts</Tab>
+        </TabList>
+        <TabIndicator
+          mt="-1.5px"
+          height="2px"
+          bg="blue.500"
+          borderRadius="1px"
+        />
+      </Tabs>
     </div>
   );
 };

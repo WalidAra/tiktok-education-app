@@ -1,7 +1,7 @@
 export const fcApi = {
   SignUp: async ({ email, fullName, password, userName }: SignUpProps) => {
     try {
-      const response = await fetch("http://localhost:4040/api/signup", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -23,7 +23,7 @@ export const fcApi = {
 
   fetchVids: async () => {
     try {
-      const response = await fetch("http://localhost:4040/api/videos", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/videos", {
         cache: "no-store",
       });
       const data = await response.json();
@@ -40,7 +40,7 @@ export const fcApi = {
 
   fetchVidByID: async (id: string) => {
     try {
-      const response = await fetch("http://localhost:4040/api/videoById", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/videoById", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export const fcApi = {
 
   fetchFollowingVids: async (id: string) => {
     try {
-      const response = await fetch("http://localhost:4040/api/following", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/following", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -84,7 +84,7 @@ export const fcApi = {
 
   fetchSearchedVids: async (searchValue: string) => {
     try {
-      const response = await fetch("http://localhost:4040/api/searchVids", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/searchVids", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -110,7 +110,7 @@ export const fcApi = {
     info: { email: string; password: string };
   }) => {
     try {
-      const response = await fetch("http://localhost:4040/api/login", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -132,7 +132,7 @@ export const fcApi = {
 
   fetchUserByID: async (id: string | null) => {
     try {
-      const response = await fetch("http://localhost:4040/api/userById", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/userById", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -155,7 +155,7 @@ export const fcApi = {
   fetchUserVids: async (id: string | null) => {
     try {
       const response = await fetch(
-        "http://localhost:4040/api/get-user-videos",
+        "https://backend-learntok-app.onrender.com/api/get-user-videos",
         {
           method: "POST",
           headers: {
@@ -188,7 +188,7 @@ export const fcApi = {
   }) => {
     try {
       const response = await fetch(
-        "http://localhost:4040/api/updateLikeState",
+        "https://backend-learntok-app.onrender.com/api/updateLikeState",
         {
           method: "POST",
           headers: {
@@ -218,7 +218,7 @@ export const fcApi = {
   }) => {
     try {
       const response = await fetch(
-        "http://localhost:4040/api/updateLikeState",
+        "https://backend-learntok-app.onrender.com/api/updateLikeState",
         {
           method: "POST",
           headers: {
@@ -246,7 +246,7 @@ export const fcApi = {
     };
   }) => {
     try {
-      const response = await fetch("http://localhost:4040/api/newComment", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/newComment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -277,7 +277,7 @@ export const fcApi = {
   }) => {
     try {
       const response = await fetch(
-        "http://localhost:4040/api/updateFollowUser",
+        "https://backend-learntok-app.onrender.com/api/updateFollowUser",
         {
           method: "POST",
           headers: {
@@ -310,7 +310,7 @@ export const fcApi = {
   }) => {
     try {
       const response = await fetch(
-        "http://localhost:4040/api/updateVideoProps",
+        "https://backend-learntok-app.onrender.com/api/updateVideoProps",
         {
           method: "POST",
           headers: {
@@ -335,7 +335,7 @@ export const fcApi = {
   DeleteUser: async (id: string) => {
     //id user
     try {
-      const response = await fetch("http://localhost:4040/api/delete-user", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/delete-user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -357,7 +357,7 @@ export const fcApi = {
 
   UpdatePfp: async ({ id, pfp }: { id: string; pfp: string }) => {
     try {
-      const response = await fetch("http://localhost:4040/api/update-pfp", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/update-pfp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -381,7 +381,7 @@ export const fcApi = {
     const { category_id, description, likes_count, poster_id, title, url } =
       videoInfo;
     try {
-      const response = await fetch("http://localhost:4040/api/upload-video", {
+      const response = await fetch("https://backend-learntok-app.onrender.com/api/upload-video", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

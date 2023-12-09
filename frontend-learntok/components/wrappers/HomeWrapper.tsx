@@ -4,6 +4,7 @@ import ColorSync from "../general/ColorSync";
 import { ChakraProvider } from "@chakra-ui/react";
 import SideBar from "../home/SideBar";
 import Main from "../home/Main";
+import MenuMobile from "../home/MenuMobile";
 
 const HomeWrapper = ({ children }: ChildrenProps) => {
   return (
@@ -18,6 +19,7 @@ const HomeWrapper = ({ children }: ChildrenProps) => {
             onDark={"bg-primaryDark text-textDark"}
             onWhite={"bg-primaryWhite text-light"}
           >
+            <MenuMobile />
             <SideBar />
 
             <Main>{children}</Main>

@@ -54,7 +54,7 @@ const Video = ({
   }, [url]);
 
   return (
-    <div className="relative w-full sm:pb-3 h-screen sm:h-video xl:h-video_xl center_all z-0">
+    <div className="relative w-full sm:pb-3 h-screen sm:h-video xl:h-video_xl center_all ">
       <div className=" h-full bg-black center_all overflow-hidden sm:rounded-lg">
         <video
           autoPlay
