@@ -26,7 +26,6 @@ def classify_text():
         # Set a threshold for considering a text offensive
         threshold = 0.5  # You can adjust this threshold based on your needs
 
-        # Check if the predicted label is offensive and the confidence score is above the threshold
         if predicted_label == offensive_label and confidence_score > threshold:
             response = {
                 'result': 'offensive',
