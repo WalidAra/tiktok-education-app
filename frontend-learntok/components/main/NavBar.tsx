@@ -10,11 +10,9 @@ const NavBar = () => {
   return (
     <ColorSync
       key={undefined}
-      style={
-        "w-full py-2 px-4 rounded hidden sm:flex items-center justify-between"
-      }
-      onDark={"bg-tertiaryDark"}
-      onWhite={"bg-secondaryWhite"}
+      style={"w-full py-2 px-4 hidden sm:flex items-center justify-between"}
+      onDark={"bg-tertiaryDark rounded"}
+      onWhite={"border-b border-ccc"}
     >
       <LogoNav />
       <InputSearch />

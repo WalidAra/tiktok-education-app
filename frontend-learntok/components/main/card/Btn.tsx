@@ -12,8 +12,8 @@ const Btn = ({ children }: Props) => {
     <button
       className={`button ${
         _theme?.value
-          ? "bg-secondaryDark hover:bg-tertiaryDark "
-          : "bg-tertiaryDark hover:bg-gray-500 text-secondaryWhite"
+          ? " hover:bg-tertiaryDark btnColor "
+          : "bg-secondaryWhite hover:bg-gray-500 "
       }`}
     >
       {children}

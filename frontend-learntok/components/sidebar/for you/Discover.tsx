@@ -19,11 +19,11 @@ const Discover = () => {
     <div
       className={`${
         isOpen ? "" : "overflow-hidden h-1/3"
-      } flex flex-col duration-75 gap-2 w-full relative`}
+      } flex flex-col duration-75 gap-2 w-full relative ${!_theme?.value && 'border-b border-ccc' }`}
     >
       <div
         className={`w-full absolute center_all h-16 bg-gradient-to-t to-transparent bottom-0 left-0 ${
-          _theme?.value ? "from-secondaryDark" : "from-secondaryWhite"
+          _theme?.value ? "from-secondaryDark" : "from-white"
         }`}
       >
         <div

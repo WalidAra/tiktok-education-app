@@ -17,7 +17,7 @@ const HomeWrapper = ({ children }: ChildrenProps) => {
               "w-full h-screen grid-cols-auto1fr block sm:grid overflow-hidden relative"
             }
             onDark={"bg-primaryDark text-textDark"}
-            onWhite={"bg-primaryWhite text-light"}
+            onWhite={"bg-white text-light"}
           >
             <MenuMobile />
             <SideBar />

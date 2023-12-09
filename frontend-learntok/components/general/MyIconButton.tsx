@@ -12,8 +12,8 @@ const MyIconButton = ({ children, style }: Props) => {
     <button
       className={`p-1.5 rounded-full center_all border border-solid border-transparent text-xl duration-200 hover:shadow-xl ${
         _theme?.value
-          ? "bg-secondaryDark hover:bg-tertiaryDark"
-          : "border-[#b5b3b3] hover:bg-whitePrimary hover:border-transparent hover:text-white "
+          ? "bg-secondaryDark hover:opacity-60"
+          : " bg-secondaryWhite scale-105"
       }  ${style} `}
     >
       {children}

@@ -7,9 +7,9 @@ const Menu = () => {
   return (
     <ColorSync
       key={undefined}
-      style={"flex flex-col w-full xl:rounded p-2"}
-      onDark={"bg-secondaryDark"}
-      onWhite={"bg-secondaryWhite"}
+      style={"flex flex-col w-full p-2"}
+      onDark={"bg-secondaryDark xl:rounded"}
+      onWhite={"border-b border-ccc"}
     >
       <ActiveSiteProvider>
         <HomeLink />

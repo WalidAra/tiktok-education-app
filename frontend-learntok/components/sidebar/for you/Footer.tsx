@@ -3,7 +3,7 @@ const Footer = () => {
 
   return (
     <div className="hidden xl:flex flex-col gap-1 h-1/3">
-      <ul className="flex flex-col gap-2 text-sm">
+      <ul className="flex flex-col gap-2 text-xs">
         <li>
           About Newsroom Store Contact Careers ByteDance Creator Directory
         </li>

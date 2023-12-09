@@ -43,7 +43,7 @@ const InputSearch = () => {
         }}
         type="text"
         className={`rounded-3xl py-2 px-3 pl-10 ${
-          _theme?.value ? "bg-backgroundDark" : ""
+          _theme?.value ? "bg-backgroundDark" : "bg-[#F1F1F2]"
         } xl:w-96 sm:w-64  duration-200`}
         placeholder="Type to Learn Something New"
       />

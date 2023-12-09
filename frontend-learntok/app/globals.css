@@ -407,7 +407,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(44, 44, 44);
   border-radius: 15px;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -418,6 +417,9 @@
   -o-border-radius: 15px;
 }
 
+.btnColor {
+  background-color: rgb(44, 44, 44);
+}
 
 .button:active {
   transform: scale(0.8);

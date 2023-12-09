@@ -12,7 +12,7 @@ const Main = ({ children }: ChildrenProps) => {
           "w-full h-screen overflow-auto sm:h-main xl:h-main_xl scroll-snap-type"
         }
         onDark={"bg-secondaryDark"}
-        onWhite={"bg-primaryWhite"}
+        onWhite={""}
       >
         {children}
       </ColorSync>
