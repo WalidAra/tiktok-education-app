@@ -9,22 +9,16 @@ pipe = pipeline("text-classification", model="badmatr11x/distilroberta-base-offe
 @app.route('/classify', methods=['POST'])
 def classify_text():
     try:
-        # Get the text to classify from the request data
         data = request.get_json()
         text_to_classify = data['text']
 
-        # Use the pipeline to classify the text
         result = pipe(text_to_classify)
 
-        # Extract the predicted label and confidence score
         predicted_label = result[0]['label']
         confidence_score = result[0]['score']
 
-        # Check if the predicted label is associated with offensive content
-        offensive_label = "OFFENSIVE-LANGUAGE"  # Adjust this based on the specific labels used by the model
-
-        # Set a threshold for considering a text offensive
-        threshold = 0.5  # You can adjust this threshold based on your needs
+        offensive_label = "OFFENSIVE-LANGUAGE" 
+        threshold = 0.5  
 
         if predicted_label == offensive_label and confidence_score > threshold:
             response = {

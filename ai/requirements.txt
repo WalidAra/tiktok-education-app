@@ -1,6 +1,4 @@
 Flask
 transformers
 torch
-torchvision
-torchaudio
-tensorflow
+requests
