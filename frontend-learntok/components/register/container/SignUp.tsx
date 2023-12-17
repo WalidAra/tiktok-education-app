@@ -80,7 +80,9 @@ const SignUp = () => {
 
           <Link href={"/forget password"}>
             <Button variant="link">
-              <span className="text-sm font-normal text-main">Forget password?</span>
+              <span className="text-sm font-normal text-main">
+                Forget password?
+              </span>
             </Button>
           </Link>
         </div>
