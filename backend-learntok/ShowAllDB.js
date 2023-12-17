@@ -10,7 +10,7 @@ const selectAllRows = (tableName) => `SELECT * FROM ${tableName}`;
 
 // MongoDB connection
 const mongoUri =
-  "mongodb+srv://arawalid90:gthp909walid@exoticcluster.mgel26i.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://arawalid90:gthp909walid@exoticcluster.8pdxbrd.mongodb.net/?retryWrites=true&w=majority";
 
 const mongoClient = new MongoClient(mongoUri, {
   useNewUrlParser: true,
@@ -33,7 +33,7 @@ async function connectToMongoDatabase() {
 
 // PostgreSQL connection
 const postgresConnectionString =
-  "postgres://exotic:mQ2z4xD33VQX0U3j84qEuiWWm9JWebEB@dpg-cl6jk992ijic73a2cheg-a.frankfurt-postgres.render.com/learntok_bmd7";
+  "postgres://learntok_e5yp_user:b4zd4c7QREi7tMy1lj2N6vDUUxppnBGZ@dpg-clvhqkla73kc73bpv0ng-a.frankfurt-postgres.render.com/learntok_e5yp";
 
 const postgresClient = new Client({
   connectionString: postgresConnectionString,

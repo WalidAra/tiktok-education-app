@@ -1,7 +1,7 @@
 const { Client } = require("pg");
 
 const connectionString =
-  "postgres://exotic:mQ2z4xD33VQX0U3j84qEuiWWm9JWebEB@dpg-cl6jk992ijic73a2cheg-a/learntok_bmd7";
+  "postgres://learntok_e5yp_user:b4zd4c7QREi7tMy1lj2N6vDUUxppnBGZ@dpg-clvhqkla73kc73bpv0ng-a/learntok_e5yp";
 
 const client = new Client({
   connectionString: connectionString,
@@ -9,6 +9,6 @@ const client = new Client({
     rejectUnauthorized: false,
   },
 });
-client.connect(); 
+client.connect();
 
 module.exports = client;
